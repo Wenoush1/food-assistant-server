@@ -1,0 +1,112 @@
+# =========================
+# Build results
+# =========================
+bin/
+obj/
+out/
+artifacts/
+
+# .NET publish output
+publish/
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Test Results
+# =========================
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# =========================
+# Coverage tools
+# =========================
+coverage/
+coverage-report/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.cache
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.*
+
+# =========================
+# User secrets
+# =========================
+secrets.json
+
+# =========================
+# Dotnet tools
+# =========================
+.dotnet/
+
+# =========================
+# Azure / Publish profiles
+# =========================
+*.PublishSettings
+*.pubxml.user
+
+# =========================
+# Local databases
+# =========================
+*.mdf
+*.ldf
+
+# =========================
+# Node (if frontend exists)
+# =========================
+node_modules/
+dist/
+build/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.swo
