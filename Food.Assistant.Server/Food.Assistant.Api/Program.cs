@@ -1,3 +1,5 @@
+using Food.Assistant.Api.MinimalApis;
+
 namespace Food.Assistant.Api;
 
 public class Program
@@ -12,6 +14,7 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
+        builder.Services.AddEndpoints();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -27,6 +30,9 @@ public class Program
         {
             app.UseHttpsRedirection();
         }
+        
+       
+        app.MapEndpoints();
         
         app.UseAuthorization();
         
