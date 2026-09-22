@@ -1,0 +1,16 @@
+﻿services:
+  postgres:
+    image: postgres:18.6
+    container_name: food-assistant-db-con
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: food-assistant-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
