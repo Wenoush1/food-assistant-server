@@ -1,4 +1,6 @@
 using Food.Assistant.Api.MinimalApis;
+using Food.Assistant.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Food.Assistant.Api;
 
@@ -15,6 +17,9 @@ public class Program
         builder.Services.AddOpenApi();
 
         builder.Services.AddEndpoints();
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
