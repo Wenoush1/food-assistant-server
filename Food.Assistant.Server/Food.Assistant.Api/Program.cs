@@ -1,3 +1,7 @@
+using Food.Assistant.Api.MinimalApis;
+using Food.Assistant.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Food.Assistant.Api;
 
 public class Program
@@ -12,6 +16,10 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
+        builder.Services.AddEndpoints();
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -27,6 +35,9 @@ public class Program
         {
             app.UseHttpsRedirection();
         }
+        
+       
+        app.MapEndpoints();
         
         app.UseAuthorization();
         
